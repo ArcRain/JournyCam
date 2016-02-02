@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F12D0F331BAD5B5F00922934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F12D0F321BAD5B5F00922934 /* main.m */; };
+		F12D0F361BAD5B5F00922934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F12D0F351BAD5B5F00922934 /* AppDelegate.m */; };
+		F12D0F3E1BAD5B5F00922934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12D0F3D1BAD5B5F00922934 /* Assets.xcassets */; };
+		F12D0F411BAD5B5F00922934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F12D0F3F1BAD5B5F00922934 /* LaunchScreen.storyboard */; };
+		F12D0F5F1BAD8E9000922934 /* JournyCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12D0F5E1BAD8E9000922934 /* JournyCamViewController.m */; };
+		F18DFC2B1C5CB169004C4563 /* JournyCamCore+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = F18DFC2A1C5CB169004C4563 /* JournyCamCore+Utility.m */; };
+		F191F5031BBD2B4A0071A2B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F191F5021BBD2B4A0071A2B3 /* AVFoundation.framework */; };
+		F1F2BA841BE4FEB7001A91F1 /* JournyCamCore+Control.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F2BA811BE4FEB7001A91F1 /* JournyCamCore+Control.m */; };
+		F1F2BA851BE4FEB7001A91F1 /* JournyCamCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F2BA831BE4FEB7001A91F1 /* JournyCamCore.m */; };
+		F1F2BA891BE5111F001A91F1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F2BA881BE5111F001A91F1 /* AssetsLibrary.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F12D0F2E1BAD5B5F00922934 /* JournyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12D0F321BAD5B5F00922934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F12D0F341BAD5B5F00922934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F12D0F351BAD5B5F00922934 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F12D0F3D1BAD5B5F00922934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F12D0F401BAD5B5F00922934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F12D0F421BAD5B5F00922934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12D0F4B1BAD5E7B00922934 /* JournyCam_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JournyCam_Prefix.pch; sourceTree = "<group>"; };
+		F12D0F5D1BAD8E9000922934 /* JournyCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournyCamViewController.h; sourceTree = "<group>"; };
+		F12D0F5E1BAD8E9000922934 /* JournyCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournyCamViewController.m; sourceTree = "<group>"; };
+		F18DFC291C5CB169004C4563 /* JournyCamCore+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JournyCamCore+Utility.h"; sourceTree = "<group>"; };
+		F18DFC2A1C5CB169004C4563 /* JournyCamCore+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JournyCamCore+Utility.m"; sourceTree = "<group>"; };
+		F191F5021BBD2B4A0071A2B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F1F2BA801BE4FEB7001A91F1 /* JournyCamCore+Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JournyCamCore+Control.h"; sourceTree = "<group>"; };
+		F1F2BA811BE4FEB7001A91F1 /* JournyCamCore+Control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JournyCamCore+Control.m"; sourceTree = "<group>"; };
+		F1F2BA821BE4FEB7001A91F1 /* JournyCamCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournyCamCore.h; sourceTree = "<group>"; };
+		F1F2BA831BE4FEB7001A91F1 /* JournyCamCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournyCamCore.m; sourceTree = "<group>"; };
+		F1F2BA881BE5111F001A91F1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F12D0F2B1BAD5B5F00922934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F2BA891BE5111F001A91F1 /* AssetsLibrary.framework in Frameworks */,
+				F191F5031BBD2B4A0071A2B3 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F12D0F251BAD5B5F00922934 = {
+			isa = PBXGroup;
+			children = (
+				F1F2BA881BE5111F001A91F1 /* AssetsLibrary.framework */,
+				F191F5021BBD2B4A0071A2B3 /* AVFoundation.framework */,
+				F12D0F301BAD5B5F00922934 /* JournyCam */,
+				F12D0F2F1BAD5B5F00922934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F12D0F2F1BAD5B5F00922934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F12D0F2E1BAD5B5F00922934 /* JournyCam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F12D0F301BAD5B5F00922934 /* JournyCam */ = {
+			isa = PBXGroup;
+			children = (
+				F1F2BA7F1BE4FEB7001A91F1 /* JournyCamCore */,
+				F12D0F5C1BAD8E6C00922934 /* ViewController */,
+				F12D0F341BAD5B5F00922934 /* AppDelegate.h */,
+				F12D0F351BAD5B5F00922934 /* AppDelegate.m */,
+				F12D0F3D1BAD5B5F00922934 /* Assets.xcassets */,
+				F12D0F3F1BAD5B5F00922934 /* LaunchScreen.storyboard */,
+				F12D0F421BAD5B5F00922934 /* Info.plist */,
+				F12D0F311BAD5B5F00922934 /* Supporting Files */,
+			);
+			path = JournyCam;
+			sourceTree = "<group>";
+		};
+		F12D0F311BAD5B5F00922934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F12D0F321BAD5B5F00922934 /* main.m */,
+				F12D0F4B1BAD5E7B00922934 /* JournyCam_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F12D0F5C1BAD8E6C00922934 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F12D0F5D1BAD8E9000922934 /* JournyCamViewController.h */,
+				F12D0F5E1BAD8E9000922934 /* JournyCamViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F1F2BA7F1BE4FEB7001A91F1 /* JournyCamCore */ = {
+			isa = PBXGroup;
+			children = (
+				F1F2BA821BE4FEB7001A91F1 /* JournyCamCore.h */,
+				F1F2BA831BE4FEB7001A91F1 /* JournyCamCore.m */,
+				F1F2BA801BE4FEB7001A91F1 /* JournyCamCore+Control.h */,
+				F1F2BA811BE4FEB7001A91F1 /* JournyCamCore+Control.m */,
+				F18DFC291C5CB169004C4563 /* JournyCamCore+Utility.h */,
+				F18DFC2A1C5CB169004C4563 /* JournyCamCore+Utility.m */,
+			);
+			path = JournyCamCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F12D0F2D1BAD5B5F00922934 /* JournyCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F12D0F451BAD5B5F00922934 /* Build configuration list for PBXNativeTarget "JournyCam" */;
+			buildPhases = (
+				F12D0F2A1BAD5B5F00922934 /* Sources */,
+				F12D0F2B1BAD5B5F00922934 /* Frameworks */,
+				F12D0F2C1BAD5B5F00922934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JournyCam;
+			productName = JournyCam;
+			productReference = F12D0F2E1BAD5B5F00922934 /* JournyCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F12D0F261BAD5B5F00922934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Sora Yang";
+				TargetAttributes = {
+					F12D0F2D1BAD5B5F00922934 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = F12D0F291BAD5B5F00922934 /* Build configuration list for PBXProject "JournyCam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F12D0F251BAD5B5F00922934;
+			productRefGroup = F12D0F2F1BAD5B5F00922934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F12D0F2D1BAD5B5F00922934 /* JournyCam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F12D0F2C1BAD5B5F00922934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12D0F411BAD5B5F00922934 /* LaunchScreen.storyboard in Resources */,
+				F12D0F3E1BAD5B5F00922934 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F12D0F2A1BAD5B5F00922934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12D0F361BAD5B5F00922934 /* AppDelegate.m in Sources */,
+				F12D0F331BAD5B5F00922934 /* main.m in Sources */,
+				F18DFC2B1C5CB169004C4563 /* JournyCamCore+Utility.m in Sources */,
+				F1F2BA851BE4FEB7001A91F1 /* JournyCamCore.m in Sources */,
+				F12D0F5F1BAD8E9000922934 /* JournyCamViewController.m in Sources */,
+				F1F2BA841BE4FEB7001A91F1 /* JournyCamCore+Control.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F12D0F3F1BAD5B5F00922934 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F12D0F401BAD5B5F00922934 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F12D0F431BAD5B5F00922934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JournyCam/JournyCam_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F12D0F441BAD5B5F00922934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JournyCam/JournyCam_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F12D0F461BAD5B5F00922934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JournyCam/JournyCam_Prefix.pch;
+				INFOPLIST_FILE = JournyCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcrain.JournyCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F12D0F471BAD5B5F00922934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JournyCam/JournyCam_Prefix.pch;
+				INFOPLIST_FILE = JournyCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcrain.JournyCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F12D0F291BAD5B5F00922934 /* Build configuration list for PBXProject "JournyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12D0F431BAD5B5F00922934 /* Debug */,
+				F12D0F441BAD5B5F00922934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F12D0F451BAD5B5F00922934 /* Build configuration list for PBXNativeTarget "JournyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12D0F461BAD5B5F00922934 /* Debug */,
+				F12D0F471BAD5B5F00922934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F12D0F261BAD5B5F00922934 /* Project object */;
+}
