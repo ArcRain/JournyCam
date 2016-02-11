@@ -182,6 +182,7 @@
 @dynamic burstShotMaxCount;
 @dynamic burstShotTimeInterval;
 @dynamic squareShot;
+@dynamic volumeShot;
 
 - (void)setBurstShotTimeInterval:(NSTimeInterval)burstShotTimeInterval {
     objc_setAssociatedObject(self, @"JournyCamCore_BurstShotTimeInterval", [NSNumber numberWithDouble:burstShotTimeInterval], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -219,13 +220,11 @@
     return [maxCount unsignedIntegerValue];
 }
 
-- (void)setSquareShot:(BOOL)squareShot
-{
+- (void)setSquareShot:(BOOL)squareShot {
     objc_setAssociatedObject(self, @"JournyCamCore_SquareShot", [NSNumber numberWithBool:squareShot], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)squareShot
-{
+- (BOOL)squareShot {
     NSNumber *isSquareShot = objc_getAssociatedObject(self, @"JournyCamCore_SquareShot");
     if (nil == isSquareShot) {
         return NO;
@@ -233,9 +232,39 @@
     return [isSquareShot boolValue];
 }
 
-- (BOOL)isSquareShot
-{
+- (BOOL)isSquareShot {
     return [self squareShot];
+}
+
+- (void)setVolumeShot:(BOOL)volumeShot {
+    objc_setAssociatedObject(self, @"JournyCamCore_VolumeShot", [NSNumber numberWithBool:volumeShot], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    NSString *observerName = @"AVSystemController_SystemVolumeDidChangeNotification";
+    if (volumeShot) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(volumeDidChange:)
+                                                     name:observerName
+                                                   object:nil];
+    }
+    else {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:observerName object:nil];
+    }
+}
+
+- (BOOL)volumeShot {
+    NSNumber *isVolumeShot = objc_getAssociatedObject(self, @"JournyCamCore_VolumeShot");
+    if (nil == isVolumeShot) {
+        return NO;
+    }
+    return [isVolumeShot boolValue];
+}
+
+- (BOOL)isVolumeShot {
+    return [self volumeShot];
+}
+
+- (void)volumeDidChange:(NSNotification *)notification {
+    [self shotImageCompletionHandler:nil];
 }
 
 - (void)shotImageCompletionHandler:(void (^)(UIImage *, NSDictionary *, NSError *))completion
@@ -250,6 +279,9 @@
             UIImageOrientation imageOrientation = [self UIImageOrientationFromCGImageOrientation:[orientation intValue]];
             image = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:imageOrientation];
             CGImageRelease(imageRef);
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(JournyCamCore:didShotImage:withMetaData:)]) {
+            [self.delegate JournyCamCore:self didShotImage:image withMetaData:metaData];
         }
         if (nil != completion) {
             completion(image, metaData, error);

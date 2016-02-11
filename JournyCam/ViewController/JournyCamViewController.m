@@ -10,7 +10,7 @@
 #import "JournyCamCore+Control.h"
 #import "JournyCamViewController.h"
 
-@interface JournyCamViewController ()
+@interface JournyCamViewController () <JournyCamCoreDelegate>
 {
     BOOL _continueCapture;
     BOOL _isCapturing;
@@ -96,6 +96,7 @@
 {
     [super viewWillAppear:animated];
     [self setNavigationBarHidden:YES animated:animated];
+    
     [self setupPreviewLayer:^(BOOL isSuccess) {
         [self.camCore start:^{
             self.zoomSlider.minimumValue = 1.0;
@@ -161,6 +162,8 @@
             if (isSuccess && (nil == self.camCore)) {
                 _camCore = [JournyCamCore new];
                 /** Config JournyCamCore Properties before ready for start **/
+                self.camCore.delegate = self;
+                self.camCore.volumeShot = YES;
                 self.camCore.burstShotMaxCount = 5;
                 self.camCore.burstShotTimeInterval = 0.5f;
                 isSuccess = [self.camCore readyForStart];
@@ -245,6 +248,16 @@
 - (void)didClickSwitch:(UIButton *)button
 {
     [self.camCore switchCamera];
+}
+
+#pragma mark - JournyCamCoreDelegate
+- (void)JournyCamCore:(JournyCamCore *)camCore didShotImage:(UIImage *)image withMetaData:(NSDictionary *)metaData {
+    if (!camCore.volumeShot) {
+        return;
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.capturedImageView.image = image;
+    });
 }
 
 @end

@@ -44,6 +44,7 @@
 - (void)dealloc {
     [self tearDown];
     objc_removeAssociatedObjects(self);
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (instancetype)init {

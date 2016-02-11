@@ -40,6 +40,8 @@
 @protocol JournyCamCoreDelegate <NSObject>
 
 @optional
+
+- (void)JournyCamCore:(JournyCamCore *)camCore didShotImage:(UIImage *)image withMetaData:(NSDictionary *)metaData;
 - (void)JournyCamCore:(JournyCamCore *)camCore didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 - (void)JournyCamCore:(JournyCamCore *)camCore didDropSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 

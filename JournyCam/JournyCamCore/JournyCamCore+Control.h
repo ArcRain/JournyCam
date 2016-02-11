@@ -58,6 +58,7 @@ typedef struct {
 
 @interface JournyCamCore (Shot)
 
+@property (nonatomic, assign, getter=isVolumeShot) BOOL volumeShot;
 @property (nonatomic, assign, getter=isSquareShot) BOOL squareShot;
 
 /**
