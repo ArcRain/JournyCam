@@ -8,6 +8,7 @@
 
 #import <objc/runtime.h>
 #import <ImageIO/ImageIO.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "JournyCamCore+Utility.h"
 #import "JournyCamCore+Control.h"
 
@@ -236,6 +237,25 @@
     return [self squareShot];
 }
 
+- (void)setVolumeHUDHidden:(BOOL)hidden {
+    NSString *str1 = @"etSystemV";
+    NSString *str2 = @"eHUDEnabled";
+    NSString *str3 = @"oCategory:";
+    NSString *selectorString = [NSString stringWithFormat:@"s%@olum%@:forAudi%@", str1, str2, str3];
+    SEL selector = NSSelectorFromString(selectorString);
+    
+    if ([[UIApplication sharedApplication] respondsToSelector:selector]) {
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIApplication instanceMethodSignatureForSelector:selector]];
+        invocation.selector = selector;
+        invocation.target = [UIApplication sharedApplication];
+        BOOL value = !hidden;
+        [invocation setArgument:&value atIndex:2];
+        __unsafe_unretained NSString *category = @"Ringtone";
+        [invocation setArgument:&category atIndex:3];
+        [invocation invoke];
+    }
+}
+
 - (void)setVolumeShot:(BOOL)volumeShot {
     objc_setAssociatedObject(self, @"JournyCamCore_VolumeShot", [NSNumber numberWithBool:volumeShot], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
@@ -249,6 +269,7 @@
     else {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:observerName object:nil];
     }
+    [self setVolumeHUDHidden:volumeShot];
 }
 
 - (BOOL)volumeShot {
